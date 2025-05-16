@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void cadastrarCliente() {
+    printf("Cadastro de cliente selecionado.\n");
+}
+
+void cadastrarProduto() {
+    printf("Cadastro de produto selecionado.\n");
+}
+
+void realizarVenda() {
+    printf("Venda selecionada.\n");
+}
+
+int main() {
+    int opcao;
+
+    while (1) {
+        printf("\n--- MENU DO SISTEMA ---\n");
+        printf("Digite 0 para sair\n");
+        printf("Digite 1 para cadastrar cliente\n");
+        printf("Digite 2 para produto\n");
+        printf("Digite 3 para venda\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 0:
+                printf("Saindo do sistema...\n");
+                return 0;
+            case 1:
+                cadastrarCliente();
+                break;
+            case 2:
+                cadastrarProduto();
+                break;
+            case 3:
+                realizarVenda();
+                break;
+            default:
+                printf("Opcao invalida! Tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
