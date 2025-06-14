@@ -78,3 +78,4 @@ O loop repete até o usuário digitar 0 (para sair).
 💾 Tudo está na memória; ao encerrar, os dados são perdidos. Poderia ter leitura/escrita em arquivos.
 📏 Limitações fixas: no máximo 10 clientes e 10 produtos.
 
+Lucas Meurer Bodanese, https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin
