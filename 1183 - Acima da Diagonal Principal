@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    char O;
+    double M[12][12], sum = 0.0;
+    int i, j, count = 0;
+
+    // Read the operation type
+    scanf(" %c", &O);  // Space before %c to skip newline
+
+    // Read the 144 elements of the matrix
+    for (i = 0; i < 12; i++) {
+        for (j = 0; j < 12; j++) {
+            scanf("%lf", &M[i][j]);
+        }
+    }
+
+    // Process elements above the main diagonal (j > i)
+    for (i = 0; i < 12; i++) {
+        for (j = i + 1; j < 12; j++) {
+            sum += M[i][j];
+            count++;
+        }
+    }
+
+    // Output result
+    if (O == 'S') {
+        printf("%.1lf\n", sum);
+    } else if (O == 'M') {
+        printf("%.1lf\n", sum / count);
+    }
+
+    return 0;
+}
