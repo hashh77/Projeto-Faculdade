@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int T, N[1000];
+    int i;
+
+    // Read input T
+    scanf("%d", &T);
+
+    // Fill the array N[1000] with repeating values from 0 to T-1
+    for (i = 0; i < 1000; i++) {
+        N[i] = i % T;
+    }
+
+    // Print each element of the array
+    for (i = 0; i < 1000; i++) {
+        printf("N[%d] = %d\n", i, N[i]);
+    }
+
+    return 0;
+}
