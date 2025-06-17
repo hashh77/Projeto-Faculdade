@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int C, i, j;
+    char T;
+    double M[12][12], sum = 0.0;
+
+    // Read column index and operation type
+    scanf("%d", &C);
+    scanf(" %c", &T);  // Space before %c to skip any leftover newline
+
+    // Read all elements of the matrix
+    for (i = 0; i < 12; i++) {
+        for (j = 0; j < 12; j++) {
+            scanf("%lf", &M[i][j]);
+        }
+    }
+
+    // Sum all elements in the specified column C
+    for (i = 0; i < 12; i++) {
+        sum += M[i][C];
+    }
+
+    // Output result: either the sum or the average
+    if (T == 'S') {
+        printf("%.1lf\n", sum);
+    } else if (T == 'M') {
+        printf("%.1lf\n", sum / 12.0);
+    }
+
+    return 0;
+}
