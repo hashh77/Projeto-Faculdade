@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    double N[100];
+    int i;
+
+    // Read the initial value into the first position
+    scanf("%lf", &N[0]);
+
+    // Fill the rest of the array: each element is half of the previous
+    for (i = 1; i < 100; i++) {
+        N[i] = N[i - 1] / 2.0;
+    }
+
+    // Print the array with 4 digits after the decimal point
+    for (i = 0; i < 100; i++) {
+        printf("N[%d] = %.4lf\n", i, N[i]);
+    }
+
+    return 0;
+}
