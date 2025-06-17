@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int L, i, j;
+    char T;
+    double M[12][12], sum = 0.0;
+
+    // Read the line index and the operation type
+    scanf("%d", &L);
+    scanf(" %c", &T); // Note the space before %c to consume newline
+
+    // Read all 144 elements of the matrix
+    for (i = 0; i < 12; i++) {
+        for (j = 0; j < 12; j++) {
+            scanf("%lf", &M[i][j]);
+        }
+    }
+
+    // Sum all elements in the specified line L
+    for (j = 0; j < 12; j++) {
+        sum += M[L][j];
+    }
+
+    // Print result
+    if (T == 'S') {
+        printf("%.1lf\n", sum);
+    } else if (T == 'M') {
+        printf("%.1lf\n", sum / 12.0);
+    }
+
+    return 0;
+}
